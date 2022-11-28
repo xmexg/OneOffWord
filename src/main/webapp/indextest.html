@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>OneoffWord-阅后即焚</title>
+<link rel="shortcut icon" href="static/img/logo.png">
+<link type="text/css" rel="stylesheet" href="static/css/index.css" />
+<script type="text/javascript" src="static/js/jquery-3.6.1.js"></script>
+<script type="text/javascript" src="static/js/vanilla-tilt.js"></script>
+<script type="text/javascript" src="static/js/jsencrypt.js"></script>
+<script type="text/javascript" src="static/js/index.js" defer></script>
+</head>
+<body>
+	<div id="bg">
+		<div id="bg_div"></div>
+	</div>
+	<div id="content">
+		<div id="content_title">
+			<div id="content_title_logo">
+				<img src="static/img/logo.png" alt="" height="60%" />
+			</div>
+			<div id="content_title_t">
+				<h1>OneoffWord - 阅后即焚</h1>
+				<hr color="#206864" width="80%">
+			</div>
+		</div>
+		<div id="content_body">
+			<div id="content_body_left">
+				<div id="content_body_left_body">
+					<div class="choose" id="choose_in">
+						<p>生成密文</p>
+					</div>
+					<div class="choose" id="choose_un">
+						<p>解析密文</p>
+					</div>
+				</div>
+			</div>
+			<div id="content_body_right">
+				<div id="default_secret" class="secret">
+					<div id="default_secret_t">
+						<p>简</p>
+						<p>介</p>
+					</div>
+					<div id="default_secret_c">
+						<p>该网站可以保存一段一次性文本</p>
+						<p>⭐ 使用“生成密文”功能，可以把一段话转化成一个网址，把网址发生给特定的人，Ta可以打开网址并阅读文本
+						<p>⭐ 使用“解析密文”功能，可查看特定id的密文，该网址在打开后开始倒记时，倒计时结束立即彻底删除</p>
+					</div>
+				</div>
+				<div id="create_secret" class="secret">
+					<div id="create_secret_c_ti">生成密文</div>
+					<div id="create_secret_c">
+						<div id="create_secret_c_textarea">
+							<textarea id="secret_content" name="secret_content"
+								maxlength="10000" placeholder="请输入密文内容"></textarea>
+						</div>
+						<div id="create_secret_c_info">
+							<div id="create_secret_c_info_time">
+								<span>阅读限时:</span><input type="number" max="20" min="1"
+									value="5" id="secret_time" name="secret_time"></input><span>分钟</span>
+							</div>
+							<div id="create_secret_c_info_zishu">
+								<span>当前字数:</span><span id="create_secret_num">0</span>
+							</div>
+							<div id="send_secret">
+								<button id="send_secret_button">生成密文</button>
+							</div>
+						</div>
+						<div id="create_secret_c_showurl"></div>
+					</div>
+				</div>
+				<div id="view_secret" class="secret">
+					<div id="view_secret_c_ti">解析密文</div>
+					<div id="view_secret_c">
+						<div id="view_secret_c_info">
+							<div id="view_secret_c_info_id">
+								<input type="text" id="secret_id" name="secret_id" maxlength="5"
+									placeholder="请输入密文id"></input>
+								<button id="view_secret_button">解析密文</button>
+							</div>
+							<div id="view_secret_c_info_time">
+								<span>阅读剩余:</span><span id="secret_time_down">0</span><span>秒</span>
+							</div>
+						</div>
+						<div id="view_secret_c_textarea">
+							<textarea id="secret_content_show" name="secret_content_show"
+								maxlength="" placeholder="解析后的密文将显示在这里" readonly></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <div id="rsa_p">
+        <%=MessageBean.getRSAPK() %>
+    </div> -->
+	<div id="RSA">-----BEGIN PUBLIC KEY-----
+		MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnGcSoZJN08opkzHKOw6b
+		s+5lqp0C3m8dExLm9HZuoPOlzDuSAl6pNQr8Dwg9szHbqnY3AUGinCHUKGkOKTyM
+		Cg6Q3hst2DZLm5JNAAd+SomWkNLpd+MismCyLLQQEsDJYnywhs19i9nD1XBu2oh0
+		fyggS8++DzIdCD/yvQkQ9COf2QroMSBCNNkasCsuw3oYMWVYdcwNkT4ETIqTJMrK
+		uMm+ma/5nr8dBGDdEPeZhMV5LFlroZXpBpD8nYBQWpGftq4udJ70448074W5P59g
+		bymKbPBfMDK6SHJcc5BT0TQ+qi51a0e/4RIW0JEzBQIScOLRIdB6czwqUczxt2Bt
+		EQIDAQAB -----END PUBLIC KEY-----</div>
+</body>
+</html>
